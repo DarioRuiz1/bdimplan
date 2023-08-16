@@ -79,7 +79,6 @@ ENGINE=InnoDB DEFAULT CHARSET=utf8;
 -- --------------------------------------------------------
 -- Estructura de tabla para la tabla 'usuario_permiso'
 CREATE TABLE `usuario_permiso` (
-  `cvuser_permiso` INT(9) AUTO_INCREMENT PRIMARY KEY NOT NULL,
   `cv_user` INT(9) NOT NULL,
   `cv_permiso` INT(9) NOT NULL,
   CONSTRAINT `fk_usuario_permiso_permiso_idx` FOREIGN KEY (`cv_user`) REFERENCES `dbimplan`.`m_user`(`cv_user`),
@@ -91,7 +90,7 @@ ENGINE=InnoDB DEFAULT CHARSET=utf8;
 -- --------------------------------------------------------
 -- Estructura de tabla para la tabla 'm_datos'
 CREATE TABLE `m_datos` (
-  `clave` INT(9) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  `clave` VARCHAR(9) PRIMARY KEY NOT NULL,
   `poligono` TINYINT(2) NOT NULL,
   `cv_perpetuidad` INT(9) NOT NULL,
   `cv_inhumado` INT(9) NOT NULL,
@@ -109,8 +108,9 @@ CREATE TABLE `m_datos` (
   ON UPDATE NO ACTION)
 ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- --------------------------------------------------------
 
+
+-- --------------------------------------------------------
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
