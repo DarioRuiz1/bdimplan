@@ -17,10 +17,10 @@ CREATE DATABASE IF NOT EXISTS dbimplan;
 USE dbimplan;
 
 -- --------------------------------------------------------
--- Estructura de tabla para la tabla 'c_permisos'
-CREATE TABLE `c_permisos` (
-  `cv_permiso` INT(9) AUTO_INCREMENT PRIMARY KEY NOT NULL,
-  `ds_permiso` VARCHAR(30) NOT NULL) 
+-- Estructura de tabla para la tabla 'c_rol'
+CREATE TABLE `c_rol` (
+  `cv_rol` INT(9) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  `ds_rol` VARCHAR(30) NOT NULL) 
 ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -31,17 +31,9 @@ CREATE TABLE `c_cabildo` (
 ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
--- Estructura de tabla para la tabla 'c_perpetuidad'
-CREATE TABLE `c_perpetuidad` (
-  `cv_perpetuidad` INT(9) AUTO_INCREMENT PRIMARY KEY NOT NULL,
-  `ds_perpetuidad` VARCHAR(100) NOT NULL,
-  `num_perpetuidad` VARCHAR(30) NOT NULL) 
-ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
 -- Estructura de tabla para la tabla 'c_inhumado'
 CREATE TABLE `c_inhumado` (
-  `cv_inhumado` INT(9) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  `cv_inhumado` INT(9) PRIMARY KEY NOT NULL,
   `nombre` VARCHAR(40) NOT NULL,
   `ape_pat` VARCHAR(30) NOT NULL,
   `ape_mat` VARCHAR(30) NOT NULL) 
@@ -57,52 +49,38 @@ CREATE TABLE `c_exhumado` (
 ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
--- Estructura de tabla para la tabla 'm_personas'
-CREATE TABLE `m_personas` (
-  `cv_persona` INT(9) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+-- Estructura de tabla para la tabla 'm_user'
+CREATE TABLE `m_user` (
+  `cv_user` INT(9) AUTO_INCREMENT PRIMARY KEY NOT NULL,
   `nombre` VARCHAR(30) NOT NULL,
   `ape_pat` VARCHAR(20) NOT NULL,
   `ape_mat` VARCHAR(20) NOT NULL,
   `email` VARCHAR(50) NOT NULL,
-  `rol` VARCHAR(50) NOT NULL)
-ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
--- Estructura de tabla para la tabla 'm_user'
-CREATE TABLE `m_user` (
-  `cv_user` INT(9) AUTO_INCREMENT PRIMARY KEY NOT NULL,
-  `cv_persona` INT(9) NOT NULL,
-  `user` VARCHAR(30) UNIQUE KEY NOT NULL,
-  `pass` VARCHAR(20) NOT NULL)
-ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
--- Estructura de tabla para la tabla 'usuario_permiso'
-CREATE TABLE `usuario_permiso` (
-  `cv_user` INT(9) NOT NULL,
-  `cv_permiso` INT(9) NOT NULL,
-  CONSTRAINT `fk_usuario_permiso_permiso_idx` FOREIGN KEY (`cv_user`) REFERENCES `dbimplan`.`m_user`(`cv_user`),
-  CONSTRAINT `fk_usuario_permiso_usuario_idx` FOREIGN KEY (`cv_permiso`) REFERENCES `dbimplan`.`c_permisos`(`cv_permiso`)
+  `pass` VARCHAR(50) NOT NULL,
+  `cv_rol` INT(9) NOT NULL,
+  CONSTRAINT `fk_data_rol` FOREIGN KEY (`cv_rol`) REFERENCES `dbimplan`.`c_rol`(`cv_rol`)
   ON DELETE NO ACTION
   ON UPDATE NO ACTION)
 ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
--- Estructura de tabla para la tabla 'm_datos'
-CREATE TABLE `m_datos` (
-  `clave` VARCHAR(9) PRIMARY KEY NOT NULL,
+-- Estructura de tabla para la tabla 'm_tumba'
+CREATE TABLE `m_tumba` (
+  `cv_tumba` INT(9) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  `clave` VARCHAR(9) NOT NULL,
   `poligono` TINYINT(2) NOT NULL,
-  `cv_perpetuidad` INT(9) NOT NULL,
+  `cv_perpetuidad` INT(2) NOT NULL,
+  `ds_perpetuidad` VARCHAR(255) NOT NULL,
+  `num_perpetuidad` TINYINT(2) NOT NULL,
   `cv_inhumado` INT(9) NOT NULL,
   `cv_exhumado` INT(9) NOT NULL,
   `cv_cabildo` INT(9) NOT NULL,
-  `capacidad` VARCHAR(99) NOT NULL,
-  `coordenadas` VARCHAR(200) NOT NULL,
+  `capacidad_gavetas` INT(2) NOT NULL,
+  `coordenadas` POINT NOT NULL,
   `caracteristicas` VARCHAR(255) NOT NULL,
   `observaciones` VARCHAR(255) NOT NULL,
-  CONSTRAINT `fk_data_perpet` FOREIGN KEY (`cv_perpetuidad`) REFERENCES `dbimplan`.`c_perpetuidad`(`cv_perpetuidad`),
-  CONSTRAINT `fk_data_inh` FOREIGN KEY (`cv_inhumado`) REFERENCES `dbimplan`.`c_inhumado`(`cv_inhumado`),
-  CONSTRAINT `fk_data_ehu` FOREIGN KEY (`cv_exhumado`) REFERENCES `dbimplan`.`c_exhumado`(`cv_exhumado`),
+  CONSTRAINT `fk_data_inhu` FOREIGN KEY (`cv_inhumado`) REFERENCES `dbimplan`.`c_inhumado`(`cv_inhumado`),
+  CONSTRAINT `fk_data_exhu` FOREIGN KEY (`cv_exhumado`) REFERENCES `dbimplan`.`c_exhumado`(`cv_exhumado`),
   CONSTRAINT `fk_data_cab` FOREIGN KEY (`cv_cabildo`) REFERENCES `dbimplan`.`c_cabildo`(`cv_cabildo`)
   ON DELETE NO ACTION
   ON UPDATE NO ACTION)
