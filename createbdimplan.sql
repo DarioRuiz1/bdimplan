@@ -33,7 +33,7 @@ ENGINE=InnoDB DEFAULT CHARSET=utf8;
 -- --------------------------------------------------------
 -- Estructura de tabla para la tabla 'c_inhumado'
 CREATE TABLE `c_inhumado` (
-  `cv_inhumado` INT(9) PRIMARY KEY NOT NULL,
+  `cv_inhumado` INT(9) NOT NULL,
   `nombre` VARCHAR(40) NOT NULL,
   `ape_pat` VARCHAR(30) NOT NULL,
   `ape_mat` VARCHAR(30) NOT NULL) 
@@ -72,14 +72,12 @@ CREATE TABLE `m_tumba` (
   `cv_perpetuidad` INT(2) NOT NULL,
   `ds_perpetuidad` VARCHAR(255) NOT NULL,
   `num_perpetuidad` TINYINT(2) NOT NULL,
-  `cv_inhumado` INT(9) NOT NULL,
   `cv_exhumado` INT(9) NOT NULL,
   `cv_cabildo` INT(9) NOT NULL,
   `capacidad_gavetas` INT(2) NOT NULL,
   `coordenadas` POINT NOT NULL,
   `caracteristicas` VARCHAR(255) NOT NULL,
   `observaciones` VARCHAR(255) NOT NULL,
-  CONSTRAINT `fk_data_inhu` FOREIGN KEY (`cv_inhumado`) REFERENCES `dbimplan`.`c_inhumado`(`cv_inhumado`),
   CONSTRAINT `fk_data_exhu` FOREIGN KEY (`cv_exhumado`) REFERENCES `dbimplan`.`c_exhumado`(`cv_exhumado`),
   CONSTRAINT `fk_data_cab` FOREIGN KEY (`cv_cabildo`) REFERENCES `dbimplan`.`c_cabildo`(`cv_cabildo`)
   ON DELETE NO ACTION

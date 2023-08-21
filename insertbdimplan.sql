@@ -14,7 +14,7 @@ INSERT INTO `c_cabildo` (`cv_cabildo`, `ds_cabildo`) VALUES
 -- Volcado de datos en la tabla 'c_inhumado'
 INSERT INTO `c_inhumado` (`cv_inhumado`, `nombre`, `ape_pat`, `ape_mat`) VALUES 
 (1, 'Jose', 'Ruiz', 'Panigua'),
-(2, 'Alan', 'Perez', 'Panigua'),
+(1, 'Alan', 'Perez', 'Panigua'),
 (3, 'Carlos', 'Perez', 'Mendez'),
 (4, 'Angel', 'Guizar', 'Garcia'),
 (5, 'Cris', 'Guillen', 'Gomez');
@@ -31,11 +31,16 @@ INSERT INTO `m_user` (`cv_user`, `nombre`, `ape_pat`, `ape_mat`, `email`, `pass`
 (null, 'Juan', 'Perez', 'Panigua', 'juanp@gmail.com', '123467', 2);
 
 -- Volcado de datos en la tabla 'm_tumba'
-INSERT INTO `m_tumba` (`cv_tumba`, `clave`, `poligono`, `cv_perpetuidad`, `ds_perpetuidad`, `num_perpetuidad`, `cv_inhumado`, `cv_exhumado`, `cv_cabildo`, `capacidad_gavetas`, `coordenadas`, `caracteristicas`, `observaciones`) VALUES 
-(1, 'S2P25', '2', 1, 'Familia Morales Panigua', '25' , 1, 2, 1, 6, POINT(19.2608, 99.0829), 'CAPILLA DE COLOR BLANCO, POSEE PUERTA Y VENTANAS DE HERRERÍA COLOR NEGRO, PRESENTA DETALLES NEOGÓTICOS', 'AL NORTE COLINDA CON MONUMENTO HISTÓRICO'),
-(null, 'S2P25', '2', 1, 'Familia Morales Panigua', '25' , 1, 2, 1, 6, POINT(19.2608, 99.0829), 'CAPILLA DE COLOR BLANCO, POSEE PUERTA Y VENTANAS DE HERRERÍA COLOR NEGRO, PRESENTA DETALLES NEOGÓTICOS', 'AL NORTE COLINDA CON MONUMENTO HISTÓRICO');
+INSERT INTO `m_tumba` (`cv_tumba`, `clave`, `poligono`, `cv_perpetuidad`, `ds_perpetuidad`, `num_perpetuidad`,  `cv_exhumado`, `cv_cabildo`, `capacidad_gavetas`, `coordenadas`, `caracteristicas`, `observaciones`) VALUES 
+(1, 'S2P25', '2', 1, 'Familia Morales Panigua', '25' , 2, 1, 6, POINT(19.2608, 99.0829), 'CAPILLA DE COLOR BLANCO, POSEE PUERTA Y VENTANAS DE HERRERÍA COLOR NEGRO, PRESENTA DETALLES NEOGÓTICOS', 'AL NORTE COLINDA CON MONUMENTO HISTÓRICO'),
+(null, 'S1P20', '1', 1, 'Familia Ruiz Garcia', '20' , 2, 1, 6, POINT(20.2618, 98.0139), 'CASTILLO ROSADO', 'A LADO DE UN OXXO');
 
-select `cv_tumba`, `clave`, `poligono`, `cv_perpetuidad`, `ds_perpetuidad`, `num_perpetuidad`, `cv_inhumado`, `cv_exhumado`, `cv_cabildo`, `capacidad_gavetas`, CONCAT('Latitud: ', ST_Y(coordenadas), ', Longitud: ', ST_X(coordenadas)), `caracteristicas`, `observaciones` from m_tumba;
+/*
+   cv_inhumado creo que en m_tumba no va, ya que se hace la consulta con el cv_tumba a la tabla trans para buscar los inhumados
+   cv_exhumado está bn
+*/
+
+select `cv_tumba`, `clave`, `poligono`, `cv_perpetuidad`, `ds_perpetuidad`, `num_perpetuidad`, `cv_exhumado`, `cv_cabildo`, `capacidad_gavetas`, CONCAT('Latitud: ', ST_Y(coordenadas), ', Longitud: ', ST_X(coordenadas)), `caracteristicas`, `observaciones` from m_tumba;
 
 
 
