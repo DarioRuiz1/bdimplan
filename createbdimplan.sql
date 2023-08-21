@@ -17,13 +17,6 @@ CREATE DATABASE IF NOT EXISTS dbimplan;
 USE dbimplan;
 
 -- --------------------------------------------------------
--- Estructura de tabla para la tabla 'c_rol'
-CREATE TABLE `c_rol` (
-  `cv_rol` INT(9) AUTO_INCREMENT PRIMARY KEY NOT NULL,
-  `ds_rol` VARCHAR(30) NOT NULL) 
-ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
 -- Estructura de tabla para la tabla 'c_cabildo'
 CREATE TABLE `c_cabildo` (
   `cv_cabildo` INT(9) AUTO_INCREMENT PRIMARY KEY NOT NULL,
@@ -49,21 +42,6 @@ CREATE TABLE `c_exhumado` (
 ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
--- Estructura de tabla para la tabla 'm_user'
-CREATE TABLE `m_user` (
-  `cv_user` INT(9) AUTO_INCREMENT PRIMARY KEY NOT NULL,
-  `nombre` VARCHAR(30) NOT NULL,
-  `ape_pat` VARCHAR(20) NOT NULL,
-  `ape_mat` VARCHAR(20) NOT NULL,
-  `email` VARCHAR(50) NOT NULL,
-  `pass` VARCHAR(50) NOT NULL,
-  `cv_rol` INT(9) NOT NULL,
-  CONSTRAINT `fk_data_rol` FOREIGN KEY (`cv_rol`) REFERENCES `dbimplan`.`c_rol`(`cv_rol`)
-  ON DELETE NO ACTION
-  ON UPDATE NO ACTION)
-ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
 -- Estructura de tabla para la tabla 'm_tumba'
 CREATE TABLE `m_tumba` (
   `cv_tumba` INT(9) AUTO_INCREMENT PRIMARY KEY NOT NULL,
@@ -83,8 +61,6 @@ CREATE TABLE `m_tumba` (
   ON DELETE NO ACTION
   ON UPDATE NO ACTION)
 ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-
 
 -- --------------------------------------------------------
 COMMIT;
