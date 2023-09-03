@@ -25,7 +25,7 @@ ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 -- Estructura de tabla para la tabla 'c_inhumado'
-CREATE TABLE `c_inhumado` (
+CREATE TABLE `t_inhumado` (
   `cv_inhumado` INT(9) NOT NULL,
   `nombre` VARCHAR(40) NOT NULL,
   `ape_pat` VARCHAR(30) NOT NULL,
@@ -34,8 +34,8 @@ ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 -- Estructura de tabla para la tabla 'c_exhumado'
-CREATE TABLE `c_exhumado` (
-  `cv_exhumado` INT(9) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+CREATE TABLE `t_exhumado` (
+  `cv_exhumado` INT(9) NOT NULL,
   `nombre` VARCHAR(40) NOT NULL,
   `ape_pat` VARCHAR(30) NOT NULL,
   `ape_mat` VARCHAR(30) NOT NULL) 
@@ -50,13 +50,11 @@ CREATE TABLE `m_tumba` (
   `cv_perpetuidad` INT(2) NOT NULL,
   `ds_perpetuidad` VARCHAR(255) NOT NULL,
   `num_perpetuidad` TINYINT(2) NOT NULL,
-  `cv_exhumado` INT(9) NOT NULL,
   `cv_cabildo` INT(9) NOT NULL,
   `capacidad_gavetas` INT(2) NOT NULL,
   `coordenadas` POINT NOT NULL,
   `caracteristicas` VARCHAR(255) NOT NULL,
   `observaciones` VARCHAR(255) NOT NULL,
-  CONSTRAINT `fk_data_exhu` FOREIGN KEY (`cv_exhumado`) REFERENCES `dbimplan`.`c_exhumado`(`cv_exhumado`),
   CONSTRAINT `fk_data_cab` FOREIGN KEY (`cv_cabildo`) REFERENCES `dbimplan`.`c_cabildo`(`cv_cabildo`)
   ON DELETE NO ACTION
   ON UPDATE NO ACTION)
