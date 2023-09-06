@@ -19,46 +19,39 @@ USE dbimplan;
 -- --------------------------------------------------------
 -- Estructura de tabla para la tabla 'c_cabildo'
 CREATE TABLE `c_cabildo` (
-  `cv_cabildo` INT(9) AUTO_INCREMENT PRIMARY KEY NOT NULL,
-  `ds_cabildo` VARCHAR(30) NOT NULL) 
-ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
--- Estructura de tabla para la tabla 'c_inhumado'
-CREATE TABLE `t_inhumado` (
-  `cv_inhumado` INT(9) NOT NULL,
-  `nombre` VARCHAR(40) NOT NULL,
-  `ape_pat` VARCHAR(30) NOT NULL,
-  `ape_mat` VARCHAR(30) NOT NULL) 
-ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
--- Estructura de tabla para la tabla 'c_exhumado'
-CREATE TABLE `t_exhumado` (
-  `cv_exhumado` INT(9) NOT NULL,
-  `nombre` VARCHAR(40) NOT NULL,
-  `ape_pat` VARCHAR(30) NOT NULL,
-  `ape_mat` VARCHAR(30) NOT NULL) 
+  `cv_sesion_cabildo` INT(6) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  `ds_sesion_cabildo` VARCHAR(30) NOT NULL) 
 ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 -- Estructura de tabla para la tabla 'm_tumba'
-CREATE TABLE `m_tumba` (
-  `cv_tumba` INT(9) AUTO_INCREMENT PRIMARY KEY NOT NULL,
-  `clave` VARCHAR(9) NOT NULL,
+CREATE TABLE `m_perpetuidad` (
+  `cv_perpetuidad` INT(9) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  `clave` VARCHAR(6) NOT NULL,
   `poligono` TINYINT(2) NOT NULL,
-  `cv_perpetuidad` INT(2) NOT NULL,
   `ds_perpetuidad` VARCHAR(255) NOT NULL,
   `num_perpetuidad` TINYINT(2) NOT NULL,
-  `cv_cabildo` INT(9) NOT NULL,
+  `cv_sesion_cabildo` INT(6) NOT NULL,
+  `fecha_sesion_cabildo` DATE NOT NULL,
   `capacidad_gavetas` INT(2) NOT NULL,
   `coordenadas` POINT NOT NULL,
   `caracteristicas` VARCHAR(255) NOT NULL,
-  `observaciones` VARCHAR(255) NOT NULL,
-  CONSTRAINT `fk_data_cab` FOREIGN KEY (`cv_cabildo`) REFERENCES `dbimplan`.`c_cabildo`(`cv_cabildo`)
+  `observaciones_historicas` VARCHAR(255) NOT NULL,
+  CONSTRAINT `fk_data_cab` FOREIGN KEY (`cv_sesion_cabildo`) REFERENCES `dbimplan`.`c_cabildo`(`cv_sesion_cabildo`)
   ON DELETE NO ACTION
   ON UPDATE NO ACTION)
 ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+-- Estructura de tabla para la tabla 'c_inhumado'
+CREATE TABLE `t_perpetuidad` (
+  `clave` VARCHAR(6) NOT NULL,
+  `nombre` VARCHAR(40) NOT NULL,
+  `ape_pat` VARCHAR(30) NOT NULL,
+  `ape_mat` VARCHAR(30) NOT NULL,
+  `tipo` VARCHAR(10) NOT NULL) 
+ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 
 -- --------------------------------------------------------
 COMMIT;
