@@ -29,7 +29,7 @@ CREATE TABLE `m_perpetuidad` (
   `cv_perpetuidad` INT(9) AUTO_INCREMENT PRIMARY KEY NOT NULL,
   `clave` VARCHAR(6) NOT NULL,
   `poligono` TINYINT(2) NOT NULL,
-  `ds_perpetuidad` VARCHAR(255) NOT NULL,
+  `propietario` VARCHAR(255) NOT NULL,
   `num_perpetuidad` TINYINT(2) NOT NULL,
   `cv_sesion_cabildo` INT(6) NOT NULL,
   `fecha_sesion_cabildo` DATE NOT NULL,
@@ -49,7 +49,7 @@ CREATE TABLE `t_perpetuidad` (
   `nombre` VARCHAR(40) NOT NULL,
   `ape_pat` VARCHAR(30) NOT NULL,
   `ape_mat` VARCHAR(30) NOT NULL,
-  `tipo` VARCHAR(10) NOT NULL) 
+  `tipo` enum("INHUMADO", "EXHUMADO") NOT NULL)
 ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
