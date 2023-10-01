@@ -6,26 +6,26 @@ INSERT INTO `c_cabildo` (`cv_sesion_cabildo`, `ds_sesion_cabildo`) VALUES
 (1, 'Sesion ordinaria'),
 (null, 'Sesion extraordinaria'),
 (null, 'Sesion solemne');
-
+	
 -- Volcado de datos en la tabla 'c_inhumado'
-INSERT INTO `t_perpetuidad` (`clave`, `nombre`, `ape_pat`, `ape_mat`, `tipo`, `ultima_modificacion`) VALUES 
-('S2P25', 'Jose', 'Ruiz', 'Panigua', 2, '1998-10-04'),
-('S2P25', 'Alan', 'Perez', 'Panigua', 2, '1998-10-04'),
-('S3P26', 'Carlos', 'Villagran', 'Mendez', 1, '1998-10-04'),
-('S3P26', 'Angel', 'Guizar', 'Garcia', 1, '1998-10-04'),
-('S3P26', 'Cristian', 'Jimenez', 'Castañeda', 'INHUMADO', '1998-10-04'),
-('S4P27', 'Eugenio', 'Derbez', 'Gonzalez', 'EXHUMADO', '1998-10-04'),
-('S4P27', 'Maria', 'Montenegro', 'Garcia', 'INHUMADO', '1998-10-04'),
-('S4P27', 'Roberto', 'Guillen', 'Gomez', 'INHUMADO', '1998-10-04'),
-('S5P28', 'Enrique', 'Aguilar', 'Garcia', 'INHUMADO', '1998-10-04'),
-('S5P28', 'Claudia', 'Sanchez', 'Garcia', 'EXHUMADO', '1998-10-04'),
-('S6P29', 'Florinda', 'Meza', 'Gomez', 'INHUMADO', '1998-10-04'),
-('S6P29', 'Yoni', 'Guillen', 'Abarca', 'INHUMADO', '1998-10-04'),
-('S7P30', 'Jorge', 'Ruiz', 'Ramirez', 'EXHUMADO', '1998-10-04'),
-('S7P30', 'Ismael', 'Panti', 'Gomez', 'EXHUMADO', '1998-10-04'),
-('S7P30', 'Manuel', 'Abarca', 'Perez', 'INHUMADO', '1998-10-04'),
-('S8P31', 'Alejandro', 'Ruiz', 'Aguilar', 'EXHUMADO', '1998-10-04'),
-('S8P31', 'Iori', 'Guillen', 'Lopez', 'INHUMADO', '1998-10-04');
+INSERT INTO `t_perpetuidad` (`cv_tperpetuidad`, `clave`, `nombre`, `ape_pat`, `ape_mat`, `tipo`, `ultima_modificacion`) VALUES 
+(null, 'S2P25', 'Jose', 'Ruiz', 'Panigua', 2, '1998-10-04'),
+(null, 'S2P25', 'Alan', 'Perez', 'Panigua', 2, '1998-10-04'),
+(null, 'S3P26', 'Carlos', 'Villagran', 'Mendez', 1, '1998-10-04'),
+(null, 'S3P26', 'Angel', 'Guizar', 'Garcia', 1, '1998-10-04'),
+(null, 'S3P26', 'Cristian', 'Jimenez', 'Castañeda', 'INHUMADO', '1998-10-04'),
+(null, 'S4P27', 'Eugenio', 'Derbez', 'Gonzalez', 'EXHUMADO', '1998-10-04'),
+(null, 'S4P27', 'Maria', 'Montenegro', 'Garcia', 'INHUMADO', '1998-10-04'),
+(null, 'S4P27', 'Roberto', 'Guillen', 'Gomez', 'INHUMADO', '1998-10-04'),
+(null, 'S5P28', 'Enrique', 'Aguilar', 'Garcia', 'INHUMADO', '1998-10-04'),
+(null, 'S5P28', 'Claudia', 'Sanchez', 'Garcia', 'EXHUMADO', '1998-10-04'),
+(null, 'S6P29', 'Florinda', 'Meza', 'Gomez', 'INHUMADO', '1998-10-04'),
+(null, 'S6P29', 'Yoni', 'Guillen', 'Abarca', 'INHUMADO', '1998-10-04'),
+(null, 'S7P30', 'Jorge', 'Ruiz', 'Ramirez', 'EXHUMADO', '1998-10-04'),
+(null, 'S7P30', 'Ismael', 'Panti', 'Gomez', 'EXHUMADO', '1998-10-04'),
+(null, 'S7P30', 'Manuel', 'Abarca', 'Perez', 'INHUMADO', '1998-10-04'),
+(null, 'S8P31', 'Alejandro', 'Ruiz', 'Aguilar', 'EXHUMADO', '1998-10-04'),
+(null, 'S8P31', 'Iori', 'Guillen', 'Lopez', 'INHUMADO', '1998-10-04');
 
 -- Volcado de datos en la tabla 'm_tumba'
 INSERT INTO `m_perpetuidad` (`cv_perpetuidad`, `clave`, `poligono`, `propietario`, `num_perpetuidad`, `cv_sesion_cabildo`, 

@@ -49,11 +49,12 @@ ENGINE=InnoDB DEFAULT CHARSET=utf8;
 -- --------------------------------------------------------
 -- Estructura de tabla para la tabla 'c_inhumado'
 CREATE TABLE `t_perpetuidad` (
+  `cv_tperpetuidad` INT(9) AUTO_INCREMENT PRIMARY KEY NOT NULL,
   `clave` VARCHAR(6) NOT NULL,
   `nombre` VARCHAR(40) NOT NULL,
   `ape_pat` VARCHAR(30) NOT NULL,
   `ape_mat` VARCHAR(30) NOT NULL,
-  `tipo` enum("INHUMADO", "EXHUMADO") NOT NULL,
+  `tipo` VARCHAR(30)NOT NULL,
   `ultima_modificacion` DATE NOT NULL)
 ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
