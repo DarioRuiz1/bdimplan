@@ -9,10 +9,10 @@ INSERT INTO `c_cabildo` (`cv_sesion_cabildo`, `ds_sesion_cabildo`) VALUES
 	
 -- Volcado de datos en la tabla 'c_inhumado'
 INSERT INTO `t_perpetuidad` (`cv_tperpetuidad`, `clave`, `nombre`, `ape_pat`, `ape_mat`, `tipo`, `ultima_modificacion`) VALUES 
-(null, 'S2P25', 'Jose', 'Ruiz', 'Panigua', 2, '1998-10-04'),
-(null, 'S2P25', 'Alan', 'Perez', 'Panigua', 2, '1998-10-04'),
-(null, 'S3P26', 'Carlos', 'Villagran', 'Mendez', 1, '1998-10-04'),
-(null, 'S3P26', 'Angel', 'Guizar', 'Garcia', 1, '1998-10-04'),
+(null, 'S2P25', 'Jose', 'Ruiz', 'Panigua', 'INHUMADO', '1998-10-04'),
+(null, 'S2P25', 'Alan', 'Perez', 'Panigua', 'INHUMADO', '1998-10-04'),
+(null, 'S3P26', 'Carlos', 'Villagran', 'Mendez', 'INHUMADO', '1998-10-04'),
+(null, 'S3P26', 'Angel', 'Guizar', 'Garcia', 'INHUMADO', '1998-10-04'),
 (null, 'S3P26', 'Cristian', 'Jimenez', 'Castañeda', 'INHUMADO', '1998-10-04'),
 (null, 'S4P27', 'Eugenio', 'Derbez', 'Gonzalez', 'EXHUMADO', '1998-10-04'),
 (null, 'S4P27', 'Maria', 'Montenegro', 'Garcia', 'INHUMADO', '1998-10-04'),
