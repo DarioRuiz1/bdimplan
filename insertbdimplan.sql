@@ -7,49 +7,77 @@ INSERT INTO `c_cabildo` (`cv_sesion_cabildo`, `ds_sesion_cabildo`) VALUES
 (null, 'Sesion extraordinaria'),
 (null, 'Sesion solemne');
 	
--- Volcado de datos en la tabla 'c_inhumado'
-INSERT INTO `t_perpetuidad` (`cv_tperpetuidad`, `clave`, `nombre`, `ape_pat`, `ape_mat`, `tipo`, `ultima_modificacion`) VALUES 
-(null, 'S2P25', 'Jose', 'Ruiz', 'Panigua', 'INHUMADO', '1998-10-04'),
-(null, 'S2P25', 'Alan', 'Perez', 'Panigua', 'INHUMADO', '1998-10-04'),
-(null, 'S3P26', 'Carlos', 'Villagran', 'Mendez', 'INHUMADO', '1998-10-04'),
-(null, 'S3P26', 'Angel', 'Guizar', 'Garcia', 'INHUMADO', '1998-10-04'),
-(null, 'S3P26', 'Cristian', 'Jimenez', 'Castañeda', 'INHUMADO', '1998-10-04'),
-(null, 'S4P27', 'Eugenio', 'Derbez', 'Gonzalez', 'EXHUMADO', '1998-10-04'),
-(null, 'S4P27', 'Maria', 'Montenegro', 'Garcia', 'INHUMADO', '1998-10-04'),
-(null, 'S4P27', 'Roberto', 'Guillen', 'Gomez', 'INHUMADO', '1998-10-04'),
-(null, 'S5P28', 'Enrique', 'Aguilar', 'Garcia', 'INHUMADO', '1998-10-04'),
-(null, 'S5P28', 'Claudia', 'Sanchez', 'Garcia', 'EXHUMADO', '1998-10-04'),
-(null, 'S6P29', 'Florinda', 'Meza', 'Gomez', 'INHUMADO', '1998-10-04'),
-(null, 'S6P29', 'Yoni', 'Guillen', 'Abarca', 'INHUMADO', '1998-10-04'),
-(null, 'S7P30', 'Jorge', 'Ruiz', 'Ramirez', 'EXHUMADO', '1998-10-04'),
-(null, 'S7P30', 'Ismael', 'Panti', 'Gomez', 'EXHUMADO', '1998-10-04'),
-(null, 'S7P30', 'Manuel', 'Abarca', 'Perez', 'INHUMADO', '1998-10-04'),
-(null, 'S8P31', 'Alejandro', 'Ruiz', 'Aguilar', 'EXHUMADO', '1998-10-04'),
-(null, 'S8P31', 'Iori', 'Guillen', 'Lopez', 'INHUMADO', '1998-10-04');
-
 -- Volcado de datos en la tabla 'm_tumba'
 INSERT INTO `m_perpetuidad` (`cv_perpetuidad`, `clave`, `poligono`, `propietario`, `num_perpetuidad`, `cv_sesion_cabildo`, 
-`fecha_sesion_cabildo`,  `ultima_modificacion`, `capacidad_gavetas`, `latitud`, `longitud`, `caracteristicas`, `observaciones_historicas`,
-`src_perpetuidad`, `src_titulo`, `src_comprobante_pago`) VALUES 
-(1, 'S2P25', '2', 'Familia Morales Panigua', 25, 1, '1998-10-04', '1998-10-04', 6, 19.2608, 90.0829, 
-'CAPILLA DE COLOR ROSADO', 'Aqui descansa un personaje muy querido', 
-"https://i.pinimg.com/S1P25_PERPETUIDAD.jpg", "https://i.pinimg.com/S1P25_TITULO.jpg", "https://i.pinimg.com/S1P25_PAGO.jpg"),
-(null, 'S1P20', '1', 'Familia Ruiz Garcia', 20, 1, '1998-10-04', '1998-10-04', 5, 19.2608, 90.0829, 'CAPILLA DE COLOR ROSADO', null, 
-"https://i.pinimg.com/S1P20_PERPETUIDAD.jpg", "https://i.pinimg.com/S1P20_TITULO.jpg", "https://i.pinimg.com/S1P20_PAGO.jpg"),
-(null, 'S3P22', '3', 'Familia Perez Lopez', 22, 1, '1998-10-04', '1998-10-04', 4, 19.2608, 90.0829, 'CAPILLA DE COLOR VERDE', null,
-"https://i.pinimg.com/S1P22_PERPETUIDAD.jpg", "https://i.pinimg.com/S1P22_TITULO.jpg", "https://i.pinimg.com/S1P22_PAGO.jpg"),
-(null, 'S4P26', '4', 'Familia Guizar Garcia', 26, 1, '1998-10-04', '1998-10-04', 7, 19.2608, 90.0829, 'CAPILLA DE COLOR ROJO', null,
-"https://i.pinimg.com/S1P26_PERPETUIDAD.jpg", "https://i.pinimg.com/S1P26_TITULO.jpg", "https://i.pinimg.com/S1P26_PAGO.jpg"),
-(null, 'S5P28', '5', 'Familia Jimenez Castañeda', 28, 1, '1998-10-04', '1998-10-04', 6, 19.2608, 90.0829, 'CAPILLA DE COLOR AZUL', null, 
-"https://i.pinimg.com/S1P28_PERPETUIDAD.jpg", "https://i.pinimg.com/S1P28_TITULO.jpg", "https://i.pinimg.com/S1P20_PAGO.jpg"),
-(null, 'S6P35', '6', 'Familia Ramirez Mendez', 35, 1, '1998-10-04', '1998-10-04', 4, 19.2608, 90.0829, 'CAPILLA DE COLOR AMARILLO', null, 
-"https://i.pinimg.com/S1P20_PERPETUIDAD.jpg", "https://i.pinimg.com/S1P35_TITULO.jpg", "https://i.pinimg.com/S1P20_PAGO.jpg"),
-(null, 'S7P15', '7', 'Familia Guillen Garcia', 15, 1, '1998-10-04', '1998-10-04', 2, 19.2608, 90.0829, 'CAPILLA DE COLOR NARANJA', null,
-"https://i.pinimg.com/S1P20_PERPETUIDAD.jpg", "https://i.pinimg.com/S1P12_TITULO.jpg", "https://i.pinimg.com/S1P20_PAGO.jpg"),
-(null, 'S8P32', '8', 'Familia Montes Ordoñez', 32, 1, '1998-10-04', '1998-10-04', 8, 19.2608, 90.0829,'CAPILLA DE COLOR CAFE', null, 
-"https://i.pinimg.com/S1P20_PERPETUIDAD.jpg", "https://i.pinimg.com/S1P31_TITULO.jpg", "https://i.pinimg.com/S1P20_PAGO.jpg");
+`fecha_sesion_cabildo`,  `ultima_modificacion`, `capacidad_gavetas`, `coordenadas`, `caracteristicas`, `observaciones_historicas`,
+`src_perpetuidad`, `src_titulo`, `src_comprobante_pago`, `payment_status`, `last_modified`) VALUES 
+(1, 'P1P11', '1', 'Familia Morales Panigua', 11, 1, '1998-10-04', '1998-10-04', 6, '19°26′08″N 99°08′29″O', 
+"CAPILLA DE COLOR BLANCO, POSEE PUERTA Y VENTANAS DE HERRERÍA COLOR NEGRO, PRESENTA DETALLES NEOGÓTICOS",
+'AL NORTE COLINDA CON MONUMENTO HISTÓRICO',
+"https://i.pinimg.com/S1P25_PERPETUIDAD.jpg", 
+"https://i.pinimg.com/S1P25_TITULO.jpg", 
+"https://i.pinimg.com/S1P25_PAGO.jpg", "PAGADO", "2023-11-1"),
 
+(null, 'P1P27', '1', 'Familia Guillen Pinto', 27, 1, '1998-10-04', '1998-10-04', 4, '19°26′08″N 88°06′222″O', 
+'CAPILLA DE COLOR GRIS, PRESENTA FISURAS EN PARAMENTO ORIENTE', null,
+"https://i.pinimg.com/S1P20_PERPETUIDAD.jpg", 
+"https://i.pinimg.com/S1P20_TITULO.jpg", 
+"https://i.pinimg.com/S1P20_PAGO.jpg", "ADEUDO", "2023-11-2"),
+
+(null, 'P1P38', '1', 'Familia Morales Gordillo', 38, 1, '1998-10-04', '1998-10-04', 2, '19°26′08″N 55°09′266″O', 
+'CAPILLA DE COLOR NARANJA, POSEE HERRERIA DE COLOR GRIS, PRESENTA HUMEDAD', 
+"COLINDA CON BARDA PERIMETRAL UBICADA EN TERCERA PONIENTE SUR",
+"https://i.pinimg.com/S1P22_PERPETUIDAD.jpg", 
+"https://i.pinimg.com/S1P22_TITULO.jpg", 
+"https://i.pinimg.com/S1P22_PAGO.jpg", "CANCELADO", "2023-11-3"),
+
+(null, 'P2P47', '2', 'FAMILIA Garduño Ortiz', 47, 1, '1998-10-04', '1998-10-04', 6, '7°33′45″N 22°04′140″O', 
+'CAPILLA DE COLOR BLANCA, PRESENTA CUBIERTA DE TABLACEMENTO', 
+'COLINDA CON ACCESO NORTE',
+"https://i.pinimg.com/S1P26_PERPETUIDAD.jpg", 
+"https://i.pinimg.com/S1P26_TITULO.jpg", 
+"https://i.pinimg.com/S1P26_PAGO.jpg", "CANCELADO", "2023-11-4"),
+
+(null, 'P2P89', '2', 'Familia Culebro Guillen', 89, 1, '1998-10-04', '1998-10-04', 2, '7°33′45″N 18°25′132″O', 
+'CAPILLA DE COLOR NARANJA, PRESENTA HERRERIA EN COLOR NEGRO.', 
+'MONUMENTO HISTORICO', 
+"https://i.pinimg.com/S1P28_PERPETUIDAD.jpg", 
+"https://i.pinimg.com/S1P28_TITULO.jpg", 
+"https://i.pinimg.com/S1P20_PAGO.jpg", "PAGADO", "2023-11-5"),
+
+(null, 'P3P14', '3', 'Familia Dominguez Jimenez', 14, 1, '1998-10-04', '1998-10-04', 2, '7°33′45″N 25°34′12″O', 
+'CAPILLA DE COLOR BLANCA, PRESENTA HUMEDAD EN TODOS SUS MUROS.', null, 
+"https://i.pinimg.com/S1P20_PERPETUIDAD.jpg", 
+"https://i.pinimg.com/S1P35_TITULO.jpg", 
+"https://i.pinimg.com/S1P20_PAGO.jpg", "ADEUDO", "2023-11-6"),
+
+(null, 'P3P55', '3', 'Familia Flores Aguilar', 55, 1, '1998-10-04', '1998-10-04', 4, '7°33′45″N 22°17′18″O', 
+'CAPILLA DE COLOR AZUL, PRESENTA CRISTALES ESMERILADOS.', 
+'AL ORIENTE COLINDA CON MONUMENTO HISTORICO',
+"https://i.pinimg.com/S1P20_PERPETUIDAD.jpg", 
+"https://i.pinimg.com/S1P12_TITULO.jpg", 
+"https://i.pinimg.com/S1P20_PAGO.jpg", "ADEUDO", "2023-11-7");
 select * from m_perpetuidad;
 
-select * from `t_perpetuidad`
+-- Volcado de datos en la tabla 'c_inhumado'
+INSERT INTO `t_perpetuidad` (`cv_tperpetuidad`, `clave`, `nombre`, `ape_pat`, `ape_mat`, `tipo`, `ultima_modificacion`) VALUES 
+(null, 'P3P55', 'Jose', 'Ruiz', 'Panigua', 'INHUMADO', '1998-10-04'),
+(null, 'P1P11', 'Alan', 'Perez', 'Panigua', 'INHUMADO', '1998-10-04'),
+(null, 'P3P14', 'Carlos', 'Villagran', 'Mendez', 'INHUMADO', '1998-10-04'),
+(null, 'P1P27', 'Angel', 'Guizar', 'Garcia', 'INHUMADO', '1998-10-04'),
+(null, 'P1P11', 'Cristian', 'Jimenez', 'Castañeda', 'INHUMADO', '1998-10-04'),
+(null, 'P3P55', 'Eugenio', 'Derbez', 'Gonzalez', 'EXHUMADO', '1998-10-04'),
+(null, 'P3P14', 'Maria', 'Montenegro', 'Garcia', 'INHUMADO', '1998-10-04'),
+(null, 'P3P14', 'Roberto', 'Guillen', 'Gomez', 'INHUMADO', '1998-10-04'),
+(null, 'P1P11', 'Enrique', 'Aguilar', 'Garcia', 'INHUMADO', '1998-10-04'),
+(null, 'P1P27', 'Claudia', 'Sanchez', 'Garcia', 'EXHUMADO', '1998-10-04'),
+(null, 'P1P11', 'Florinda', 'Meza', 'Gomez', 'INHUMADO', '1998-10-04'),
+(null, 'P1P27', 'Yoni', 'Guillen', 'Abarca', 'INHUMADO', '1998-10-04'),
+(null, 'P3P14', 'Jorge', 'Ruiz', 'Ramirez', 'EXHUMADO', '1998-10-04'),
+(null, 'P3P14', 'Ismael', 'Panti', 'Gomez', 'EXHUMADO', '1998-10-04'),
+(null, 'P3P55', 'Manuel', 'Abarca', 'Perez', 'INHUMADO', '1998-10-04'),
+(null, 'P3P14', 'Alejandro', 'Ruiz', 'Aguilar', 'EXHUMADO', '1998-10-04'),
+(null, 'P3P55', 'Iori', 'Guillen', 'Lopez', 'INHUMADO', '1998-10-04');
+
+SELECT * FROM t_perpetuidad;
 

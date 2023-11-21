@@ -40,8 +40,8 @@ CREATE TABLE `m_perpetuidad` (
   `src_perpetuidad` VARCHAR(255) NOT NULL,
   `src_titulo` VARCHAR(255) NOT NULL,
   `src_comprobante_pago` VARCHAR(255) NOT NULL,
-  `payment_status` VARCHAR(20) NOT NULL,
-  `last_modified` VARCHAR(50) NULL,
+  `payment_status` ENUM("PAGADO", "ADEUDO", "CANCELADO") NOT NULL,
+  `last_modified` VARCHAR(50) NOT NULL,
   `cv_sesion_cabildo` INT(6) NOT NULL,
   CONSTRAINT `fk_data_cab` FOREIGN KEY (`cv_sesion_cabildo`) REFERENCES `dbimplan`.`c_cabildo`(`cv_sesion_cabildo`)
   ON DELETE CASCADE)
@@ -55,7 +55,7 @@ CREATE TABLE `t_perpetuidad` (
   `nombre` VARCHAR(40) NOT NULL,
   `ape_pat` VARCHAR(30) NOT NULL,
   `ape_mat` VARCHAR(30) NOT NULL,
-  `tipo` VARCHAR(30)NOT NULL,
+  `tipo` ENUM("INHUMADO", "EXHUMADO") NOT NULL,
   `ultima_modificacion` DATE NOT NULL)
 ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
