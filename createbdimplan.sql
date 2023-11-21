@@ -23,10 +23,6 @@ CREATE TABLE `c_cabildo` (
   `ds_sesion_cabildo` VARCHAR(30) NOT NULL) 
 ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-DELETE FROM c_cabildo WHERE cv_sesion_cabildo like 1;
-DELETE FROM Clientes
-WHERE Name = "Pedro";
-
 -- --------------------------------------------------------
 -- Estructura de tabla para la tabla 'm_tumba'
 CREATE TABLE `m_perpetuidad` (
@@ -38,13 +34,14 @@ CREATE TABLE `m_perpetuidad` (
   `fecha_sesion_cabildo` DATE NOT NULL,
   `ultima_modificacion` DATE NOT NULL,
   `capacidad_gavetas` INT(2) NOT NULL,
-  `latitud` FLOAT(10, 6) NOT NULL,
-  `longitud` FLOAT(10, 6) NOT NULL,
+  `coordenadas` VARCHAR(30) NOT NULL,
   `caracteristicas` VARCHAR(255) NOT NULL,
   `observaciones_historicas` VARCHAR(255),
   `src_perpetuidad` VARCHAR(255) NOT NULL,
   `src_titulo` VARCHAR(255) NOT NULL,
   `src_comprobante_pago` VARCHAR(255) NOT NULL,
+  `payment_status` VARCHAR(20) NOT NULL,
+  `last_modified` VARCHAR(50) NULL,
   `cv_sesion_cabildo` INT(6) NOT NULL,
   CONSTRAINT `fk_data_cab` FOREIGN KEY (`cv_sesion_cabildo`) REFERENCES `dbimplan`.`c_cabildo`(`cv_sesion_cabildo`)
   ON DELETE CASCADE)
