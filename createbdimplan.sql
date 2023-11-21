@@ -40,7 +40,7 @@ CREATE TABLE `m_perpetuidad` (
   `src_titulo` VARCHAR(255) NOT NULL,
   `src_comprobante_pago` VARCHAR(255) NOT NULL,
   `payment_status` ENUM("PAGADO", "ADEUDO", "CANCELADO") NOT NULL,
-  `last_modification` VARCHAR(50) NOT NULL,
+  `last_modification` DATETIME NOT NULL,
   `cv_sesion_cabildo` INT(6) NOT NULL,
   CONSTRAINT `fk_data_cab` FOREIGN KEY (`cv_sesion_cabildo`) REFERENCES `dbimplan`.`c_cabildo`(`cv_sesion_cabildo`)
   ON DELETE CASCADE)
