@@ -46,7 +46,7 @@ CREATE TABLE `m_perpetuidad` (
   CONSTRAINT `fk_data_cab` FOREIGN KEY (`cv_sesion_cabildo`) REFERENCES `dbimplan`.`c_cabildo`(`cv_sesion_cabildo`)
   ON DELETE CASCADE)
 ENGINE=InnoDB DEFAULT CHARSET=utf8;
-SELECT * FROM m_perpetuidad;
+
 -- --------------------------------------------------------
 -- Estructura de tabla para la tabla 'c_inhumado'
 CREATE TABLE `t_perpetuidad` (
@@ -59,11 +59,7 @@ CREATE TABLE `t_perpetuidad` (
   `ultima_modificacion` DATE NOT NULL)
 ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-SELECT * FROM t_perpetuidad;
-
-
 -- --------------------------------------------------------
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
