@@ -9,49 +9,49 @@ INSERT INTO `c_cabildo` (`cv_sesion_cabildo`, `ds_sesion_cabildo`) VALUES
 	
 -- Volcado de datos en la tabla 'm_tumba'
 INSERT INTO `m_perpetuidad` (`cv_perpetuidad`, `clave`, `poligono`, `propietario`, `num_perpetuidad`, `cv_sesion_cabildo`, 
-`fecha_sesion_cabildo`,  `ultima_modificacion`, `capacidad_gavetas`, `coordenadas`, `caracteristicas`, `observaciones_historicas`,
-`src_perpetuidad`, `src_titulo`, `src_comprobante_pago`, `payment_status`, `last_modified`) VALUES 
-(1, 'P1P11', '1', 'Familia Morales Panigua', 11, 1, '1998-10-04', '1998-10-04', 6, '19°26′08″N 99°08′29″O', 
+`fecha_sesion_cabildo`, `capacidad_gavetas`, `coordenadas`, `caracteristicas`, `observaciones_historicas`,
+`src_perpetuidad`, `src_titulo`, `src_comprobante_pago`, `payment_status`, `last_modification`) VALUES 
+(1, 'P1P11', '1', 'Familia Morales Panigua', 11, 1, '1998-10-04', 6, '19°26′08″N 99°08′29″O', 
 "CAPILLA DE COLOR BLANCO, POSEE PUERTA Y VENTANAS DE HERRERÍA COLOR NEGRO, PRESENTA DETALLES NEOGÓTICOS",
 'AL NORTE COLINDA CON MONUMENTO HISTÓRICO',
 "https://i.pinimg.com/S1P25_PERPETUIDAD.jpg", 
 "https://i.pinimg.com/S1P25_TITULO.jpg", 
 "https://i.pinimg.com/S1P25_PAGO.jpg", "PAGADO", "2023-11-1"),
 
-(null, 'P1P27', '1', 'Familia Guillen Pinto', 27, 1, '1998-10-04', '1998-10-04', 4, '19°26′08″N 88°06′222″O', 
+(null, 'P1P27', '1', 'Familia Guillen Pinto', 27, 1, '1998-10-04', 4, '19°26′08″N 88°06′222″O', 
 'CAPILLA DE COLOR GRIS, PRESENTA FISURAS EN PARAMENTO ORIENTE', null,
 "https://i.pinimg.com/S1P20_PERPETUIDAD.jpg", 
 "https://i.pinimg.com/S1P20_TITULO.jpg", 
 "https://i.pinimg.com/S1P20_PAGO.jpg", "ADEUDO", "2023-11-2"),
 
-(null, 'P1P38', '1', 'Familia Morales Gordillo', 38, 1, '1998-10-04', '1998-10-04', 2, '19°26′08″N 55°09′266″O', 
+(null, 'P1P38', '1', 'Familia Morales Gordillo', 38, 1, '1998-10-04', 2, '19°26′08″N 55°09′266″O', 
 'CAPILLA DE COLOR NARANJA, POSEE HERRERIA DE COLOR GRIS, PRESENTA HUMEDAD', 
 "COLINDA CON BARDA PERIMETRAL UBICADA EN TERCERA PONIENTE SUR",
 "https://i.pinimg.com/S1P22_PERPETUIDAD.jpg", 
 "https://i.pinimg.com/S1P22_TITULO.jpg", 
 "https://i.pinimg.com/S1P22_PAGO.jpg", "CANCELADO", "2023-11-3"),
 
-(null, 'P2P47', '2', 'FAMILIA Garduño Ortiz', 47, 1, '1998-10-04', '1998-10-04', 6, '7°33′45″N 22°04′140″O', 
+(null, 'P2P47', '2', 'FAMILIA Garduño Ortiz', 47, 1, '1998-10-04', 6, '7°33′45″N 22°04′140″O', 
 'CAPILLA DE COLOR BLANCA, PRESENTA CUBIERTA DE TABLACEMENTO', 
 'COLINDA CON ACCESO NORTE',
 "https://i.pinimg.com/S1P26_PERPETUIDAD.jpg", 
 "https://i.pinimg.com/S1P26_TITULO.jpg", 
 "https://i.pinimg.com/S1P26_PAGO.jpg", "CANCELADO", "2023-11-4"),
 
-(null, 'P2P89', '2', 'Familia Culebro Guillen', 89, 1, '1998-10-04', '1998-10-04', 2, '7°33′45″N 18°25′132″O', 
+(null, 'P2P89', '2', 'Familia Culebro Guillen', 89, 1, '1998-10-04', 2, '7°33′45″N 18°25′132″O', 
 'CAPILLA DE COLOR NARANJA, PRESENTA HERRERIA EN COLOR NEGRO.', 
 'MONUMENTO HISTORICO', 
 "https://i.pinimg.com/S1P28_PERPETUIDAD.jpg", 
 "https://i.pinimg.com/S1P28_TITULO.jpg", 
 "https://i.pinimg.com/S1P20_PAGO.jpg", "PAGADO", "2023-11-5"),
 
-(null, 'P3P14', '3', 'Familia Dominguez Jimenez', 14, 1, '1998-10-04', '1998-10-04', 2, '7°33′45″N 25°34′12″O', 
+(null, 'P3P14', '3', 'Familia Dominguez Jimenez', 14, 1, '1998-10-04', 2, '7°33′45″N 25°34′12″O', 
 'CAPILLA DE COLOR BLANCA, PRESENTA HUMEDAD EN TODOS SUS MUROS.', null, 
 "https://i.pinimg.com/S1P20_PERPETUIDAD.jpg", 
 "https://i.pinimg.com/S1P35_TITULO.jpg", 
 "https://i.pinimg.com/S1P20_PAGO.jpg", "ADEUDO", "2023-11-6"),
 
-(null, 'P3P55', '3', 'Familia Flores Aguilar', 55, 1, '1998-10-04', '1998-10-04', 4, '7°33′45″N 22°17′18″O', 
+(null, 'P3P55', '3', 'Familia Flores Aguilar', 55, 1, '1998-10-04', 4, '7°33′45″N 22°17′18″O', 
 'CAPILLA DE COLOR AZUL, PRESENTA CRISTALES ESMERILADOS.', 
 'AL ORIENTE COLINDA CON MONUMENTO HISTORICO',
 "https://i.pinimg.com/S1P20_PERPETUIDAD.jpg", 
