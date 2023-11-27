@@ -6,6 +6,13 @@ INSERT INTO `c_cabildo` (`cv_sesion_cabildo`, `ds_sesion_cabildo`) VALUES
 (1, 'Sesion ordinaria'),
 (null, 'Sesion extraordinaria'),
 (null, 'Sesion solemne');
+
+-- Volcado de datos en la tabla 'm_users'
+INSERT INTO `m_users` (`cv_user`, `nombre`, `ape_pat`, `ape_mat`, `login`, `password`, `rol`) VALUES 
+(1, 'Jose', 'Ruis', 'Garsia', 'Jose', '123456', 'Administrador'),
+(null, 'Dario', 'Ruis', 'Garsia', 'Dario', '123456', 'Capturista'),
+(null, 'Fernando', 'Peres', 'Vasques', 'Fernanfloo', '123456', 'Capturista');
+select * from m_users;
 	
 -- Volcado de datos en la tabla 'm_tumba'
 INSERT INTO `m_perpetuidad` (`cv_perpetuidad`, `clave`, `poligono`, `propietario`, `num_perpetuidad`, `cv_sesion_cabildo`, 
