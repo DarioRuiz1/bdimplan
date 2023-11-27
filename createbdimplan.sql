@@ -27,10 +27,10 @@ ENGINE=InnoDB DEFAULT CHARSET=utf8;
 -- Estructura de tabla para la tabla 'm_tumba'
 CREATE TABLE `m_perpetuidad` (
   `cv_perpetuidad` INT(9) AUTO_INCREMENT PRIMARY KEY NOT NULL,
-  `clave` VARCHAR(6) NOT NULL,
+  `clave` VARCHAR(9) NOT NULL,
   `poligono` TINYINT(2) NOT NULL,
   `propietario` VARCHAR(255) NOT NULL,
-  `num_perpetuidad` TINYINT(2) NOT NULL,
+  `num_perpetuidad` TINYINT(4) NOT NULL,
   `fecha_sesion_cabildo` DATE NOT NULL,
   `capacidad_gavetas` INT(2) NOT NULL,
   `coordenadas` VARCHAR(30) NOT NULL,

@@ -31,14 +31,14 @@ INSERT INTO `m_perpetuidad` (`cv_perpetuidad`, `clave`, `poligono`, `propietario
 "https://i.pinimg.com/S1P20_TITULO.jpg", 
 "https://i.pinimg.com/S1P20_PAGO.jpg", "ADEUDO", "2023-11-2T08:11:55.4566668"),
 
-(null, 'P1P38', '1', 'Familia Morales Gordillo', 38, 1, '1997-11-08', 2, '19°26′08″N 55°09′266″O', 
+(null, 'P1P38', '1', 'Familia Morales Gordillo', 38, 3, '1997-11-08', 2, '19°26′08″N 55°09′266″O', 
 'CAPILLA DE COLOR NARANJA, POSEE HERRERIA DE COLOR GRIS, PRESENTA HUMEDAD', 
 "COLINDA CON BARDA PERIMETRAL UBICADA EN TERCERA PONIENTE SUR",
 "https://i.pinimg.com/S1P22_PERPETUIDAD.jpg", 
 "https://i.pinimg.com/S1P22_TITULO.jpg", 
 "https://i.pinimg.com/S1P22_PAGO.jpg", "CANCELADO", "2023-11-3T08:11:55.4566668"),
 
-(null, 'P2P47', '2', 'FAMILIA Garduño Ortiz', 47, 1, '2010-11-07', 6, '7°33′45″N 22°04′140″O', 
+(null, 'P2P47', '2', 'FAMILIA Garduño Ortiz', 47, 2, '2010-11-07', 6, '7°33′45″N 22°04′140″O', 
 'CAPILLA DE COLOR BLANCA, PRESENTA CUBIERTA DE TABLACEMENTO', 
 'COLINDA CON ACCESO NORTE',
 "https://i.pinimg.com/S1P26_PERPETUIDAD.jpg", 
@@ -52,13 +52,13 @@ INSERT INTO `m_perpetuidad` (`cv_perpetuidad`, `clave`, `poligono`, `propietario
 "https://i.pinimg.com/S1P28_TITULO.jpg", 
 "https://i.pinimg.com/S1P20_PAGO.jpg", "PAGADO", "2023-11-5T08:11:55.4566668"),
 
-(null, 'P3P14', '3', 'Familia Dominguez Jimenez', 14, 1, '2018-12-20', 2, '7°33′45″N 25°34′12″O', 
+(null, 'P3P14', '3', 'Familia Dominguez Jimenez', 14, 2, '2018-12-20', 2, '7°33′45″N 25°34′12″O', 
 'CAPILLA DE COLOR BLANCA, PRESENTA HUMEDAD EN TODOS SUS MUROS.', null, 
 "https://i.pinimg.com/S1P20_PERPETUIDAD.jpg", 
 "https://i.pinimg.com/S1P35_TITULO.jpg", 
 "https://i.pinimg.com/S1P20_PAGO.jpg", "ADEUDO", "2023-11-6T00:00:00"),
 
-(null, 'P3P55', '3', 'Familia Flores Aguilar', 55, 1, '2015-03-16', 4, '7°33′45″N 22°17′18″O', 
+(null, 'P3P55', '3', 'Familia Flores Aguilar', 55, 3, '2015-03-16', 4, '7°33′45″N 22°17′18″O', 
 'CAPILLA DE COLOR AZUL, PRESENTA CRISTALES ESMERILADOS.', 
 'AL ORIENTE COLINDA CON MONUMENTO HISTORICO',
 "https://i.pinimg.com/S1P20_PERPETUIDAD.jpg", 
