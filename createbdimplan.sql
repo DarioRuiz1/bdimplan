@@ -30,7 +30,7 @@ CREATE TABLE `m_perpetuidad` (
   `clave` VARCHAR(9) NOT NULL,
   `poligono` TINYINT(2) NOT NULL,
   `propietario` VARCHAR(255) NOT NULL,
-  `num_perpetuidad` TINYINT(4) NOT NULL,
+  `num_perpetuidad` INT(4) NOT NULL,
   `fecha_sesion_cabildo` DATE NOT NULL,
   `capacidad_gavetas` INT(2) NOT NULL,
   `coordenadas` VARCHAR(30) NOT NULL,
