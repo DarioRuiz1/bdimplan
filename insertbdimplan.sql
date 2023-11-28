@@ -1,4 +1,4 @@
-## Entrar a la base de datos llamada: "dbimplan"
+## Entrar a la base ## Entrar a la base de datos llamada: "dbimplan"
 USE dbimplan;
 
 -- Volcado de datos en la tabla 'c_cabildo'
@@ -6,6 +6,13 @@ INSERT INTO `c_cabildo` (`cv_sesion_cabildo`, `ds_sesion_cabildo`) VALUES
 (1, 'Sesion ordinaria'),
 (null, 'Sesion extraordinaria'),
 (null, 'Sesion solemne');
+
+-- Volcado de datos en la tabla 'm_users'
+INSERT INTO `m_users` (`cv_user`, `nombre`, `ape_pat`, `ape_mat`, `login`, `password`, `rol`) VALUES 
+(1, 'Jose', 'Ruis', 'Garsia', 'Jose', '123456', 'Administrador'),
+(null, 'Dario', 'Ruis', 'Garsia', 'Dario', '123456', 'Capturista'),
+(null, 'Fernando', 'Peres', 'Vasques', 'Fernanfloo', '123456', 'Capturista');
+select * from m_users;
 	
 -- Volcado de datos en la tabla 'm_tumba'
 INSERT INTO `m_perpetuidad` (`cv_perpetuidad`, `clave`, `poligono`, `propietario`, `num_perpetuidad`, `cv_sesion_cabildo`, 
@@ -18,7 +25,7 @@ INSERT INTO `m_perpetuidad` (`cv_perpetuidad`, `clave`, `poligono`, `propietario
 "https://i.pinimg.com/S1P25_TITULO.jpg", 
 "https://i.pinimg.com/S1P25_PAGO.jpg", "PAGADO", "2023-11-1T08:11:55.4566668"),  
 
-(null, 'P1P570', '1', 'Familia Guillen Pinto', 570, 2, '1999-08-22', 4, '19°26′08″N 88°06′222″O', 
+(null, 'P1P27', '1', 'Familia Guillen Pinto', 27, 2, '1999-08-22', 4, '19°26′08″N 88°06′222″O', 
 'CAPILLA DE COLOR GRIS, PRESENTA FISURAS EN PARAMENTO ORIENTE', null,
 "https://i.pinimg.com/S1P20_PERPETUIDAD.jpg", 
 "https://i.pinimg.com/S1P20_TITULO.jpg", 
@@ -80,4 +87,3 @@ INSERT INTO `t_perpetuidad` (`cv_tperpetuidad`, `clave`, `nombre`, `ape_pat`, `a
 (null, 'P3P55', 'Iori', 'Guillen', 'Lopez', 'INHUMADO', '2023-11-7T08:11:55.4566668');
 
 SELECT * FROM t_perpetuidad;
-

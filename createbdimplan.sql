@@ -23,14 +23,25 @@ CREATE TABLE `c_cabildo` (
   `ds_sesion_cabildo` VARCHAR(30) NOT NULL) 
 ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- Estructura de tabla para la tabla 'm_users'
+CREATE TABLE `m_users` (
+  `cv_user` INT(9) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  `nombre` VARCHAR(30) NOT NULL,
+  `ape_pat` VARCHAR(20) NOT NULL,
+  `ape_mat` VARCHAR(20) NOT NULL,
+  `login` VARCHAR(30) NOT NULL,
+  `password` VARCHAR(30) NOT NULL,
+  `rol` ENUM("ADMINISTRADOR", "CAPTURISTA")  NOT NULL) 
+ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 -- --------------------------------------------------------
 -- Estructura de tabla para la tabla 'm_tumba'
 CREATE TABLE `m_perpetuidad` (
   `cv_perpetuidad` INT(9) AUTO_INCREMENT PRIMARY KEY NOT NULL,
-  `clave` VARCHAR(9) NOT NULL,
+  `clave` VARCHAR(6) NOT NULL,
   `poligono` TINYINT(2) NOT NULL,
   `propietario` VARCHAR(255) NOT NULL,
-  `num_perpetuidad` INT(4) NOT NULL,
+  `num_perpetuidad` TINYINT(2) NOT NULL,
   `fecha_sesion_cabildo` DATE NOT NULL,
   `capacidad_gavetas` INT(2) NOT NULL,
   `coordenadas` VARCHAR(30) NOT NULL,
@@ -52,7 +63,7 @@ CREATE TABLE `t_perpetuidad` (
   `cv_tperpetuidad` INT(9) AUTO_INCREMENT PRIMARY KEY NOT NULL,
   `clave` VARCHAR(6) NOT NULL,
   `nombre` VARCHAR(40) NOT NULL,
-  `ape_pat` VARCHAR(30) NOT NULL,
+  `ape_pat` VARCHAR(30) NOT NULL, 
   `ape_mat` VARCHAR(30) NOT NULL,
   `tipo` ENUM("INHUMADO", "EXHUMADO") NOT NULL,
   `ultima_modificacion` DATE NOT NULL)
