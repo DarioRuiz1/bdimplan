@@ -25,7 +25,7 @@ INSERT INTO `m_perpetuidad` (`cv_perpetuidad`, `clave`, `poligono`, `propietario
 "https://i.pinimg.com/S1P25_TITULO.jpg", 
 "https://i.pinimg.com/S1P25_PAGO.jpg", "PAGADO", "2023-11-1T08:11:55.4566668"),  
 
-(null, 'P1P27', '1', 'Familia Guillen Pinto', 27, 2, '1999-08-22', 4, '19°26′08″N 88°06′222″O', 
+(null, 'P1P570', '1', 'Familia Guillen Pinto', 570, 2, '1999-08-22', 4, '19°26′08″N 88°06′222″O', 
 'CAPILLA DE COLOR GRIS, PRESENTA FISURAS EN PARAMENTO ORIENTE', null,
 "https://i.pinimg.com/S1P20_PERPETUIDAD.jpg", 
 "https://i.pinimg.com/S1P20_TITULO.jpg", 
